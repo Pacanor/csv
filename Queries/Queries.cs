@@ -11,20 +11,28 @@ namespace Queries
         {
             var query = (from s in myList
                                        where s.Capital.Equals(cityType)
-                                       orderby s.Country ascending
-                                       select s.Population);
+                                       select s);
 
             double[] populations = new double[myList.Count];
+            int i = 0;
 
             foreach (CitiesImportModel city in query)
             {
-                 populations = city.Population;
+                populations[i] = city.Population;
+                i++;
                     
             }
             
             double result = StatStandardDev.StandDev(populations);
 
             return result;
+        }
+
+        public static double StandDevQuery(IList<CitiesImportModel> myList, string cityType, double score)
+        {
+            double standDev = StandDevQuery(myList, cityType);
+            double zScore = (score - mean) / standDev;
+            return zScore;
         }
     }
 }
