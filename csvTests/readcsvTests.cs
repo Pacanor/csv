@@ -12,12 +12,23 @@ namespace csv.Tests
     [TestClass()]
     public class ReadcsvTests
     {
+        //private IList<CitiesImportModel> myList = new IList<CitiesImportModel>();
+        private dynamic myList;
+
         [TestMethod()]
-        public void ReadInCSVTest()
+        public void ReadCsvTest()
         {
             var path = "c://csvfiles//worldcities.csv";
             var doubleTypeConversion = new DoubleConversion();
-            IList<CityModelImport> myList = ReadCsv.ReadCsvFile<CityModelImport, CityMap>(path, doubleTypeConversion);
+            myList = ReadCsv.ReadCsvFile<CitiesImportModel, CityMap>(path, doubleTypeConversion);
+            Assert.IsNotNull(myList);
+        }
+        [TestMethod()]
+        public void AllCSVTest()
+        {
+            var path = "c://csvfiles//worldcities.csv";
+            var doubleTypeConversion = new DoubleConversion();
+            IList<CitiesImportModel> myList = ReadCsv.ReadCsvFile<CitiesImportModel, CityMap>(path, doubleTypeConversion);
             var countryCapitalQuery = (from s in myList
                                       where s.Capital.Equals("primary")
                                       orderby s.Country ascending
@@ -43,7 +54,7 @@ namespace csv.Tests
 
             Assert.AreEqual(15493, myList.Count());
 
-            using (var dbContext = new CitiesContext())
+            using (var dbContext = new CityContext())
             {
                 dbContext.Database.Connection.Close();
             }
@@ -58,7 +69,7 @@ namespace csv.Tests
                                 orderby countryGroup.Key.Country
                                 select countryGroup;
 
-            using (var db = new CitiesContext())
+            using (var db = new CityContext())
             {
                 foreach (var country in countryGroups)
             {

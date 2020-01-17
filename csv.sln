@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csvTests", "csvTests\csvTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cities", "City\Cities.csproj", "{DBD3FB53-7C34-4AC4-823E-01495F3EA52C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityOrm", "EntityOrm\EntityOrm.csproj", "{367F2CD4-6157-4139-91A4-734233BE7D34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityOrm", "EntityOrm\EntityOrm.csproj", "{367F2CD4-6157-4139-91A4-734233BE7D34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{E24E02D8-7808-42C1-A10A-CC957B334DE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{367F2CD4-6157-4139-91A4-734233BE7D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367F2CD4-6157-4139-91A4-734233BE7D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367F2CD4-6157-4139-91A4-734233BE7D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
