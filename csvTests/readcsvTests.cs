@@ -37,7 +37,7 @@ namespace csv.Tests
             foreach (CityModelImport city in countryCapitalQuery)
             {
                 Debug.Write(city.Country + ": " + city.City_name + Environment.NewLine);
-            }*/
+           
             var queryName = nameof(countryCapitalQuery);
             var writePath = "c://csvfiles//" + queryName + ".csv";
             using (var writer = new StreamWriter(writePath))
@@ -46,14 +46,14 @@ namespace csv.Tests
                 csv.WriteRecords(countryCapitalQuery);
             }
             Assert.IsTrue(File.Exists(writePath));
-
+             }
             var QSCount = (from city in countryCapitalQuery
                            select city).Count();
 
             //Debug.Write(QSCount);
 
             Assert.AreEqual(15493, myList.Count());
-
+            */
             using (var dbContext = new CityContext())
             {
                 dbContext.Database.Connection.Close();
