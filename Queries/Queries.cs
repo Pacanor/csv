@@ -7,18 +7,18 @@ namespace Queries
 {
     public class Queries
     {
-        public static double[] GetPopulations(IList<CitiesImportModel> myList, string cityType)
+        public static int[] GetPopulations(IList<CitiesImportModel> myList, string cityType)
         {
             var query = (from s in myList
                          where s.Capital.Equals(cityType)
                          select s);
 
-            double[] populations = new double[myList.Count];
+            int[] populations = new int[myList.Count];
             int i = 0;
 
             foreach (CitiesImportModel city in query)
             {
-                populations[i] = city.Population;
+                populations[i] = Convert.ToInt32(city.Population);
                 i++;
 
             }
@@ -27,16 +27,16 @@ namespace Queries
         }
         public static double StandDevQuery(IList<CitiesImportModel> myList, string cityType)
         {
-            double[] populations = GetPopulations(myList, cityType);
-            double result = StatStandardDev.StandDev(populations);
+            int[] populations = GetPopulations(myList, cityType);
+            double standDev = StatStandardDev.StandDev(populations);
 
-            return result;
+            return standDev;
         }
 
-        public static double StandDevQuery(IList<CitiesImportModel> myList, string cityType, double score)
+        public static double ZScoreQuery(IList<CitiesImportModel> myList, string cityType, int score)
         {
-            double[] populations = GetPopulations(myList, cityType);
-            int mean = StatMean
+            int[] populations = GetPopulations(myList, cityType);
+            double mean = StatMean.Mean(populations);
             double standDev = StandDevQuery(myList, cityType);
             double zScore = (score - mean) / standDev;
             return zScore;

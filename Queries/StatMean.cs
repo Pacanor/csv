@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StatisticOperations
+namespace Queries   
 {
     public class StatMean
     {

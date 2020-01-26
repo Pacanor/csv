@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cities", "City\Cities.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityOrm", "EntityOrm\EntityOrm.csproj", "{367F2CD4-6157-4139-91A4-734233BE7D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{E24E02D8-7808-42C1-A10A-CC957B334DE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queries", "Queries\Queries.csproj", "{E24E02D8-7808-42C1-A10A-CC957B334DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueriesTests", "QueriesTests\QueriesTests.csproj", "{A09637A8-D097-4466-80E8-59A7BB794A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E24E02D8-7808-42C1-A10A-CC957B334DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09637A8-D097-4466-80E8-59A7BB794A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09637A8-D097-4466-80E8-59A7BB794A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09637A8-D097-4466-80E8-59A7BB794A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09637A8-D097-4466-80E8-59A7BB794A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
